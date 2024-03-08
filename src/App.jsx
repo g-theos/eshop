@@ -11,12 +11,12 @@ const App = () => {
 
   // Fetch products from localStorage on initial render
   useEffect(() => {
-    const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+    const storedProducts = JSON.parse(localStorage.getItem('products')) || products;
     setProducts(storedProducts);
 
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(storedCart);
-  }, []);
+  }, []); 
 
   // Update localStorage whenever products or cart change
   useEffect(() => {
